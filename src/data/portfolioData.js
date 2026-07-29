@@ -94,8 +94,8 @@ export const projectsData = [
     shortDesc: "Real-time metrics dashboard monitoring system health, API latency, and live user interactions with WebSocket streaming.",
     fullDesc: "Built a high-concurrency developer telemetry platform featuring live chart visualization, custom alert triggers, and dark mode UI inspired by space flight controls.",
     tags: ["React", "Node.js", "WebSockets", "TailwindCSS", "Recharts", "Redis"],
-    github: "https://github.com/aditya/skeld-metrics-dashboard",
-    demo: "https://example.com/demo-1",
+    github: "https://github.com/adi0206-hue/aditya-portfolio",
+    demo: "https://adi0206-hue.github.io/aditya-portfolio/",
     featured: true,
     wireColors: ["#c51111", "#38fedc", "#f5f557", "#50ef39"]
   },
@@ -108,8 +108,8 @@ export const projectsData = [
     shortDesc: "AI-powered code auditing tool that identifies anti-patterns, security bugs, and memory leaks before deployment.",
     fullDesc: "Engineered an intelligent code scanner utilizing LLM APIs to review GitHub Pull Requests automatically, generating inline suggestion diffs and security scores.",
     tags: ["Python", "FastAPI", "OpenAI API", "React", "Docker", "GitHub API"],
-    github: "https://github.com/aditya/code-impostor-ai",
-    demo: "https://example.com/demo-2",
+    github: "https://github.com/adi0206-hue/aditya-portfolio",
+    demo: "https://adi0206-hue.github.io/aditya-portfolio/",
     featured: true,
     wireColors: ["#6b2fbb", "#ed54ba", "#f07d0d", "#38fedc"]
   },
@@ -122,8 +122,8 @@ export const projectsData = [
     shortDesc: "Modern e-commerce storefront with sub-second page loads, Stripe checkout integration, and instant search.",
     fullDesc: "Created a headless e-commerce store with server-side rendering, dynamic inventory caching, custom shopping cart drawers, and frictionless checkout flow.",
     tags: ["Next.js", "TypeScript", "Stripe API", "PostgreSQL", "Prisma", "TailwindCSS"],
-    github: "https://github.com/aditya/vortex-commerce",
-    demo: "https://example.com/demo-3",
+    github: "https://github.com/adi0206-hue/aditya-portfolio",
+    demo: "https://adi0206-hue.github.io/aditya-portfolio/",
     featured: true,
     wireColors: ["#f5f557", "#c51111", "#50ef39", "#ed54ba"]
   },
@@ -136,8 +136,8 @@ export const projectsData = [
     shortDesc: "End-to-end encrypted messaging application with file sharing, voice notes, and customizable sound themes.",
     fullDesc: "Designed a lightweight messaging client with WebRTC peer-to-peer audio calls, persistent chat history in SQLite/IndexedDB, and custom themes.",
     tags: ["React", "WebRTC", "Socket.io", "Express", "TailwindCSS"],
-    github: "https://github.com/aditya/pulse-chat",
-    demo: "https://example.com/demo-4",
+    github: "https://github.com/adi0206-hue/aditya-portfolio",
+    demo: "https://adi0206-hue.github.io/aditya-portfolio/",
     featured: false,
     wireColors: ["#38fedc", "#6b2fbb", "#f07d0d", "#c51111"]
   }
