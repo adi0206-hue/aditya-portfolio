@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  --font-among: 'Fredoka', 'Space Grotesk', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+
+  /* Colors */
+  --bg-space: #0b0e14;
+  --panel-bg: rgba(18, 24, 38, 0.85);
+  --panel-border: #2e3b52;
+  --panel-border-thick: #0d121c;
+
+  /* Crewmate Palette */
+  --c-red: #c51111;
+  --c-red-dark: #7a0808;
+  --c-cyan: #38fedc;
+  --c-cyan-dark: #1ab098;
+  --c-lime: #50ef39;
+  --c-lime-dark: #2aa01d;
+  --c-purple: #6b2fbb;
+  --c-purple-dark: #3e1973;
+  --c-pink: #ed54ba;
+  --c-yellow: #f5f557;
+  --c-orange: #f07d0d;
+  --c-visor: #71d4ec;
+  --c-visor-light: #bbf2ff;
+
+  --c-emergency: #ff2a2a;
+  --c-gold: #ffd700;
+
+  /* Shadows */
+  --shadow-skeld: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --shadow-neon-cyan: 0 0 20px rgba(56, 254, 220, 0.3);
+  --shadow-neon-red: 0 0 25px rgba(255, 42, 42, 0.5);
+  --shadow-neon-green: 0 0 20px rgba(80, 239, 57, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-space);
+  color: #e2e8f0;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0d121c;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--panel-border);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-cyan);
+}
+
+/* Typography Utility */
+.font-among {
+  font-family: var(--font-among);
+  letter-spacing: 0.5px;
+}
+
+/* Skeld Window / Panel Container */
+.skeld-card {
+  background: var(--panel-bg);
+  backdrop-filter: blur(12px);
+  border: 3px solid #1e293b;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.skeld-card:hover {
+  border-color: rgba(56, 254, 220, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(56, 254, 220, 0.15);
+}
+
+/* Cartoon Heavy Border Button (Among Us Style) */
+.btn-among {
+  font-family: var(--font-among);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 14px;
+  border: 3px solid #000;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 6px 0 #000;
+  transition: all 0.12s ease;
+  user-select: none;
+}
+
+.btn-among:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #000;
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, #38fedc 0%, #1ab098 100%);
+  color: #0b121e;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(180deg, #64ffea 0%, #20c8ad 100%);
+  box-shadow: 0 6px 0 #000, 0 0 15px rgba(56, 254, 220, 0.5);
+}
+
+.btn-emergency {
+  background: linear-gradient(180deg, #ff3b3b 0%, #b80000 100%);
+  color: #fff;
+  animation: pulseEmergency 2s infinite alternate;
+}
+
+.btn-emergency:hover {
+  background: linear-gradient(180deg, #ff5c5c 0%, #d60000 100%);
+  box-shadow: 0 6px 0 #000, 0 0 20px rgba(255, 59, 59, 0.7);
+}
+
+.btn-secondary {
+  background: linear-gradient(180deg, #2a364f 0%, #151d2d 100%);
+  color: #e2e8f0;
+  border-color: #000;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(180deg, #38496b 0%, #1c273c 100%);
+  color: #fff;
+}
+
+@keyframes pulseEmergency {
+  0% {
+    box-shadow: 0 6px 0 #000, 0 0 5px rgba(255, 42, 42, 0.4);
+  }
+  100% {
+    box-shadow: 0 6px 0 #000, 0 0 25px rgba(255, 42, 42, 0.9);
+  }
+}
+
+/* Among Us Vector Crewmate Drawing Helper */
+.crewmate-svg {
+  filter: drop-shadow(0 8px 0 rgba(0, 0, 0, 0.8));
+}
+
+/* Task Badge */
+.task-badge {
+  font-family: var(--font-among);
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.task-completed {
+  background: #50ef39;
+  color: #082104;
+}
+
+.task-critical {
+  background: #ff2a2a;
+  color: #ffffff;
+}
+
+.task-info {
+  background: #38fedc;
+  color: #04241f;
+}
+
+/* Security Scanlines */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Scanning Beam for MedBay */
+@keyframes laserScan {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    top: 90%;
+    opacity: 1;
+  }
+  100% {
+    top: 0%;
+    opacity: 0.8;
+  }
+}
+
+.scanner-laser {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, transparent, #50ef39, #ffffff, #50ef39, transparent);
+  box-shadow: 0 0 15px #50ef39, 0 0 30px #50ef39;
+  animation: laserScan 2.5s infinite ease-in-out;
+}
+
+/* Glassmorphic Room Badge */
+.room-tag {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-family: var(--font-among);
+  font-size: 0.85rem;
+  color: var(--c-cyan);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Floating animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
+}
+
+.float-anim {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .btn-among {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+  
+  .skeld-card {
+    border-radius: 16px;
+  }
+}
